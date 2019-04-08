@@ -1,16 +1,140 @@
-body{
+@font-face{
+  font-family: "start";
+  src: url(./assets/fonts/Bomber\ Balloon.ttf);
+
+}
+body{ 
     background-image:url("https://i.pinimg.com/originals/45/1d/51/451d5105f660fa72f8e1395cec93565c.jpg");
     background-position:bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
 
+  *{margin: 0px; padding: 0px}
+
+  .buttonStart{
+  color:#fff;
+  font-family: "start";
+  text-align: center;
+  padding: 20px;
+  margin-left: 750px;
+  margin-top: 107px;
+  position: absolute;
+  font-size: 80px;
+   
+}
+
+.buttonStart {
+  padding:80px 90px;
+  outline: none;
+  background-color: #27ae60;
+  border: none;
+  border-radius:100px;
+  box-shadow: 0 9px #008000;
+  z-index: 90;
+}
+
+.buttonStart:hover{
+  background-color: #008000;
+}
+
+.buttonStart:active {
+  background-color: #2ecc71;
+  box-shadow: 0 5px #008000;
+  transform: translateY(4px);
+}
+
+.buttonGame > button {
+  width: 105px;
+  height: 105px;
+  margin:15px;
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+   position: relative;
+  box-sizing:border-box;
+}
+
+.button-one {
+  padding:30px 35px;
+  outline: none;
+  background-color: #6495ed;
+  border: none;
+  border-radius:100px;
+  box-shadow: 0 9px #1f66e5;
+}
+
+.button-one:hover{
+  background-color: #1f66e5;
+}
+
+.button-one:active {
+  background-color: #6495ed;
+  box-shadow: 0 5px #1f66e5;
+  transform: translateY(4px);
+}
+
+.game1 {
+  width:50px;
+  height:auto;
+}
+ 
+.button-two {
+  padding:22px 25px;
+  outline: none;
+  background-color: #ffa500;
+  border: none;
+  border-radius:100px;
+  box-shadow: 0 9px #cc8400;
+}
+
+.button-two:hover{
+  background-color: #cc8400;
+}
+
+.button-two:active {
+  background-color: #ffa500;
+  box-shadow: 0 5px #cc8400;
+  transform: translateY(4px);
+}
+.game2{
+  width:60px;
+  height:auto;
+}
+  
+
+.button-tree {
+  padding:28px 20px;
+  outline: none;
+  background-color: #f2d50c;
+  border: none;
+  border-radius:100px;
+  box-shadow: 0 9px #c1aa09;
+}
+
+.button-tree:hover{
+  background-color: #c1aa09;
+}
+
+.button-tree:active {
+  background-color: #f2d50c;
+  box-shadow: 0 5px #c1aa09;
+  transform: translateY(4px);
+}
+
+.game3 {
+  width:75px;
+  height:auto;
+}
+
   canvas{
+    position: relative;
       padding-left: 0;
       padding-right: 0;
       margin-left: auto;
       margin-right: auto;
       display: block;
+      z-index: -1;
   }
   .logo img{
       width: 400px;
@@ -21,4 +145,10 @@ body{
   .logo{
     display:flex;
     justify-content: center;
+  }
+
+  .section3{
+    display: block;
+    position: absolute;
+    top: 60px;
   }
