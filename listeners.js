@@ -3,7 +3,9 @@ let buttonStart = document.getElementById('buttonStart')
 let subMain = document.getElementById('sub-main')
 let p1Success = false;
 let p1Fail = false;
-//crea 2 booleanos para el P2
+let p2Success =false;
+let p2Fail = false;
+
 
 buttonStart.addEventListener('click', ()=>{
    subMain.style.visibility = 'hidden'
@@ -13,18 +15,34 @@ buttonStart.addEventListener('click', ()=>{
 
 document.addEventListener('keydown', (e)=>{
    if(e.keyCode === 68 || e.keyCode === 65){
+       console.log(foodP1.status, e.keyCode)
        if(foodP1.status === e.keyCode){
            p1Success = true
-           randomFood = foodList[Math.floor(Math.random()*foodList.length)]
-           foodP1 = new FoodP1(randomFood)
+           randomFoodP1 = foodListP1[Math.floor(Math.random()*foodListP1.length)]
+           foodP1 = new FoodP1(randomFoodP1)
            foodP1.draw()
+           console.log("success")
        } else {
            p1Fail = true
-           randomFood = foodList[Math.floor(Math.random()*foodList.length)]
-           foodP1 = new FoodP1(randomFood)
+           randomFoodP1 = foodListP1[Math.floor(Math.random()*foodListP1.length)]
+           foodP1 = new FoodP1(randomFoodP1)
            foodP1.draw()
        }
    }
 })
 
-//crear todo un eventlistener para P2
+document.addEventListener('keydown', (e)=>{
+    if(e.keyCode === 39 || e.keyCode === 37){
+        if(foodP2.status === e.keyCode){
+            p2Success = true
+            randomFoodP2 = foodListP2[Math.floor(Math.random()*foodListP2.length)]
+            foodP2 = new FoodP2(randomFoodP2)
+            foodP2.draw()
+        } else {
+            p2Fail = true
+            randomFoodP2 = foodListP2[Math.floor(Math.random()*foodListP2.length)]
+            foodP2 = new FoodP2(randomFoodP2)
+            foodP2.draw()
+        }
+    }
+ })

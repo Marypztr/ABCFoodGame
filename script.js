@@ -13,6 +13,9 @@ function update(){
    wrong2.draw()
    check2.draw()
    foodP1.draw()
+   foodP2.draw()
+ 
+
    if(p1Success){
        babyBoy.x = 80000;
        successBoy.draw()
@@ -22,7 +25,16 @@ function update(){
        failsBoy.draw()
        setTimeout(function(){ p1Fail = false, babyBoy.x = 100 }, 200);
    }
-   //vuelve a pegar el if/else aqui linea 25 y cambia a PEDOS
+   if(p2Success){
+    babyGirl.x = 80000;
+    successGirl.draw()
+    setTimeout(function(){ p2Success = false, babyGirl.x = 600 }, 200);
+}else if (p2Fail){
+    babyGirl.x = 80000;
+    failsGirl.draw()
+    setTimeout(function(){ p2Fail = false, babyGirl.x = 600 }, 200);
+}
+
 }
 
 function start(){

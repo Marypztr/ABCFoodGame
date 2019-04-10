@@ -10,50 +10,194 @@ const images = {
   wrong:"assets/images/buttonError.png"
 }
 
+
+
 //68 se lo asignas a la comida Buena y 65 a la comida mala
-const foodList = [
-food1={
-  img: './assets/images/food/apple.png',
-  status: 68,
-  //statusP2: keyCode ---- le pones el keycode de las flechas
-},
-food2={
-  img: './assets/images/food/banana.png',
-  status: 68
-},
-food3={
-  img:'./assets/images/food/beer.png',
+const foodListP1 = [
+  food1={
+    img: './assets/images/food/apple.png',
+    status: 68
+    
+  },
+  food2={
+    img: './assets/images/food/banana.png',
+    status: 68
+    
+  },
+  food3={
+    img:'./assets/images/food/beer.png',
+    status:65
+    
+  },
+  food4={
+    img:'./assets/images/food/biberon.png',
+    status: 68
+    
+  },
+  food5={
+    img:'./assets/images/food/cake.png',
+    status:65
+    
+  },
+  food6={
+    img:'./assets/images/food/carrot.png',
+    status: 68
+    
+  },
+  food7={
+    img:'./assets/images/food/cookie.png',
+    status:65
+    
+  },
+  food8={
+    img:'./assets/images/food/fries.png',
+    status:65
+    
+  },
+  food9={
+    img:'./assets/images/food/pineappple.png',
+    status: 68
+    
+  },
+  food10={
+    img:'./assets/images/food/pizza.png',
+    status:65
+    
+  },
+  food11={
+    img:'./assets/images/food/burger.png',
+    status:65
+    
+  },
+  food12 ={
+    img:'./assets/images/food/coke.png',
+    status:65
+    
+  },
+  food13 ={
+  img:'./assets/images/food/donut.png',
   status:65
-},
-food4={
-  img:'./assets/images/food/biberon.png',
-  status:68
-},
-food5={
-  img:'./assets/images/food/cake.png',
-  status:65
-},
-food6={
-  img:'./assets/images/food/carrot.png',
-  status:68
-},
-food7={
-  img:'./assets/images/food/cookie.png',
-  status:65
-},
-food8={
-  img:'./assets/images/food/fries.png',
-  status:65
-},
-food9={
-  img:'./assets/images/food/pineappple.png',
-  status:68
-},
-food10={
-  img:'./assets/images/food/pizza.png',
-  status:65
-}
-]
+  },
+  food14={
+    img:'./assets/images/food/grapes.png',
+    status: 68
+    
+  },
+  food15={
+    img:'./assets/images/food/iceCream.png',
+    status:65
+    
+  },
+  food16={
+    img:'./assets/images/food/salad.png',
+    status: 68
+    
+  },
+  food17={
+    img:'./assets/images/food/strawberry.png',
+    status: 68
+    
+  },
+  food18={
+    img:'./assets/images/food/tacos.png',
+    status:65
+    
+  }
+  ]
+
+const foodListP2 = [
+  food1={
+    img: './assets/images/food/apple.png',
+    status:39
+    //statusP2: keyCode ---- le pones el keycode de las flechas
+  },
+  food2={
+    img: './assets/images/food/banana.png',
+
+    status:39
+  },
+  food3={
+    img:'./assets/images/food/beer.png',
+
+    status:37
+  },
+  food4={
+    img:'./assets/images/food/biberon.png',
+    
+    status:39
+  },
+  food5={
+    img:'./assets/images/food/cake.png',
+    
+    status:37
+  },
+  food6={
+    img:'./assets/images/food/carrot.png',
+    
+    status:39
+  },
+  food7={
+    img:'./assets/images/food/cookie.png',
+    
+    status:37
+  },
+  food8={
+    img:'./assets/images/food/fries.png',
+    
+    status:37
+  },
+  food9={
+    img:'./assets/images/food/pineappple.png',
+    
+    status:39
+  },
+  food10={
+    img:'./assets/images/food/pizza.png',
+    
+    status:37
+  },
+  food11={
+    img:'./assets/images/food/burger.png',
+    
+    status:37
+  },
+  food12 ={
+    img:'./assets/images/food/coke.png',
+    
+    status:37
+  },
+  food13 ={
+  img:'./assets/images/food/donut.png',
+  
+  status:37
+  },
+  food14={
+    img:'./assets/images/food/grapes.png',
+    
+    status:39
+  },
+  food15={
+    img:'./assets/images/food/iceCream.png',
+    
+    status:37
+  },
+  food16={
+    img:'./assets/images/food/salad.png',
+    
+    status:39
+  },
+  food17={
+    img:'./assets/images/food/strawberry.png',
+    
+    status:39
+  },
+  food18={
+    img:'./assets/images/food/tacos.png',
+    
+    status:37
+  }
+  ]
+  
 
 /////CHARACTERS//////
 class BabyBoy{
@@ -138,6 +282,34 @@ class BabyGirl{
   }
 }
 
+class SuccessGirl{
+  constructor(x, y, img) {
+    this.x = x
+    this.y = y
+    this.img = new Image()
+    this.img.src= images.happyGirl
+    this.img.onload = () => {
+      this.draw()
+    }
+  }
+  draw(){
+    ctx.drawImage(this.img, this.x, this.y, 207, 233)
+  }
+  }
+  class FailGirl{
+  constructor(x, y, img) {
+    this.x = x
+    this.y = y
+    this.img = new Image()
+    this.img.src= images.girlSad
+    this.img.onload = () => {
+      this.draw()
+    }
+  }
+  draw(){
+    ctx.drawImage(this.img, this.x, this.y, 207, 233)
+  }
+  }
 
 
 /////OTHER ELEMENTS//////
@@ -220,7 +392,7 @@ class Wrong2 {
   }
 }
 
-class FoodP1 { //crea esta misma clase para P2 en medio de las flechas
+class FoodP1 { 
 	constructor (index){
 		this.x = 160
 		this.y = 360
@@ -240,4 +412,26 @@ class FoodP1 { //crea esta misma clase para P2 en medio de las flechas
 		ctx.clearRect(this.img, this.x, this.y, 0)
 	}
 }
+
+class FoodP2 { 
+	constructor (index){
+		this.x = 670
+		this.y = 360
+		this.width = 70
+		this.height = 70
+		this.img = new Image()
+		this.img.src = index.img
+		this.status = index.status
+		this.img.onload = () => {
+			this.draw()
+		} 
+	}
+	draw(){
+		ctx.drawImage(this.img, this.x, this.y, 70, 70)
+	}
+	clear(){
+		ctx.clearRect(this.img, this.x, this.y, 0)
+	}
+}
+
 
