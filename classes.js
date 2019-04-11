@@ -386,9 +386,7 @@ constructor(x, y, img) {
   this.music.src ="./assets/music/Success.mp3"
   this.img = new Image()
   this.img.src= images.happyBoy
-  this.img.onload = () => {
-    this.draw()
-  }
+
 }
 draw(){
   ctx.drawImage(this.img, this.x, this.y, 243, 209)
@@ -402,9 +400,7 @@ constructor(x, y, img) {
   this.music.src="./assets/music/error.mp3"
   this.img = new Image()
   this.img.src= images.boySad
-  this.img.onload = () => {
-    this.draw()
-  }
+
 }
 draw(){
   ctx.drawImage(this.img, this.x, this.y, 171, 211)
@@ -447,9 +443,7 @@ class SuccessGirl{
     this.music.src ="./assets/music/Success.mp3"
     this.img = new Image()
     this.img.src= images.happyGirl
-    this.img.onload = () => {
-      this.draw()
-    }
+
   }
   draw(){
     ctx.drawImage(this.img, this.x, this.y, 243, 224)
@@ -463,9 +457,7 @@ class SuccessGirl{
     this.music.src="./assets/music/error.mp3"
     this.img = new Image()
     this.img.src= images.girlSad
-    this.img.onload = () => {
-      this.draw()
-    }
+
   }
   draw(){
     ctx.drawImage(this.img, this.x, this.y, 171, 226)
@@ -484,9 +476,10 @@ constructor(img){
   this.music.src = "./assets/music/background.mp3"
   this.img = new Image()
   this.img.src = img
-  this.img.onload = () => {
+  this.img.onload = () =>{
     this.draw()
   }
+
   }
   draw(){
       ctx.drawImage(this.img, this.x, this.y, canvas.width, canvas.height)
@@ -499,9 +492,7 @@ constructor (x, y, img) {
   this.y = 360
   this.img = new Image()
   this.img.src= img
-  this.img.onload = () => {
-    this.draw()
-  }
+
 }
 draw(){
   ctx.drawImage(this.img, this.x, this.y, 70, 70)
@@ -514,9 +505,7 @@ class Check2 {
   this.y = 360
   this.img = new Image()
   this.img.src= img
-  this.img.onload = () => {
-    this.draw()
-  }
+
   }
   draw(){
       ctx.drawImage(this.img, this.x, this.y, 70, 70)
@@ -530,9 +519,7 @@ class Wrong {
   this.y = 360
   this.img = new Image()
   this.img.src= img
-  this.img.onload = () => {
-    this.draw()
-  }
+
   }
   draw(){
       ctx.drawImage(this.img, this.x, this.y, 70, 70)
@@ -546,9 +533,7 @@ class Wrong2 {
   this.y = 360
   this.img = new Image()
   this.img.src= img
-  this.img.onload = () => {
-    this.draw()
-  }    
+ 
 }
   draw(){
     ctx.drawImage(this.img, this.x, this.y, 70, 70)
@@ -563,10 +548,8 @@ class FoodP1 {
 		this.height = 70
 		this.img = new Image()
 		this.img.src = index.img
-		this.status = index.status
-		this.img.onload = () => {
-			this.draw()
-		} 
+    this.status = index.status
+    
 	}
 	draw(){
 		ctx.drawImage(this.img, this.x, this.y, 70, 70)
@@ -585,9 +568,7 @@ class FoodP2 {
 		this.img = new Image()
 		this.img.src = index.img
 		this.status = index.status
-		this.img.onload = () => {
-			this.draw()
-		} 
+	
 	}
 	draw(){
 		ctx.drawImage(this.img, this.x, this.y, 70, 70)
