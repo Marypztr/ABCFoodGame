@@ -62,4 +62,6 @@ function stop(){
 clearInterval(interval)
 interval = 0
 board.music.pause()
+gameover.drawWinner()
+gameover.music.play()
 }

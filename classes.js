@@ -7,7 +7,8 @@ const images = {
   happyBoy:"assets/characters/happyBoy.png",
   board:"assets/images/board1.jpg",
   check:"assets/images/checkButton.png",
-  wrong:"assets/images/buttonError.png"
+  wrong:"assets/images/buttonError.png",
+  gameover:"assets/images/gameover.png",
 }
 
 
@@ -488,5 +489,42 @@ class ScoreP1{
       ctx.font = "120px start"
       ctx.fillStyle = "black"
       ctx.fillText(this.time,  400, 200)
+    }
+  }
+
+  class GameOver{
+    constructor(img){
+      this.x = 0
+      this.y = 0
+      this.height = 450
+      this.width = 900
+      this.text = 'GAME OVER'
+      this.winner = ''
+      this.music = new Audio()
+      this.music.src = "./assets/music/gameover.mp3"
+      this.img = new Image()
+      this.img.src = img
+      this.img.onload = () => {
+        this.draw()
+      }
+    }
+    drawWinner(){
+      ctx.drawImage(this.img, this.x, this.y, canvas.width, canvas.height)
+      if(scoreP1.score > scoreP2.score){
+        this.winner = 'Player 1'
+        successBoy.draw()
+        failsGirl.draw()
+      } else {
+        this.winner = 'Player 2'
+        successGirl.draw()
+        failsBoy.draw()
+      }
+      ctx.font = "120px start"
+      ctx.fillStyle = "black"
+      ctx.fillText(this.text,  200, 80)
+      ctx.font = "60px start"
+      ctx.fillStyle = "black"
+      ctx.fillText('The winner is: ' + this.winner,  200, 400)
+      
     }
   }
