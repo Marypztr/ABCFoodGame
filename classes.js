@@ -229,6 +229,8 @@ class SuccessBoy{
 constructor(x, y, img) {
   this.x = x
   this.y = y
+  this.music = new Audio()
+  this.music.src ="./assets/music/Success.mp3"
   this.img = new Image()
   this.img.src= images.happyBoy
   this.img.onload = () => {
@@ -243,6 +245,8 @@ class FailBoy{
 constructor(x, y, img) {
   this.x = x
   this.y = y
+  this.music = new Audio()
+  this.music.src="./assets/music/error.mp3"
   this.img = new Image()
   this.img.src= images.boySad
   this.img.onload = () => {
@@ -286,6 +290,8 @@ class SuccessGirl{
   constructor(x, y, img) {
     this.x = x
     this.y = y
+    this.music = new Audio()
+    this.music.src ="./assets/music/Success.mp3"
     this.img = new Image()
     this.img.src= images.happyGirl
     this.img.onload = () => {
@@ -293,13 +299,15 @@ class SuccessGirl{
     }
   }
   draw(){
-    ctx.drawImage(this.img, this.x, this.y, 207, 233)
+    ctx.drawImage(this.img, this.x, this.y, 243, 224)
   }
   }
   class FailGirl{
   constructor(x, y, img) {
     this.x = x
     this.y = y
+    this.music = new Audio()
+    this.music.src="./assets/music/error.mp3"
     this.img = new Image()
     this.img.src= images.girlSad
     this.img.onload = () => {
@@ -307,7 +315,7 @@ class SuccessGirl{
     }
   }
   draw(){
-    ctx.drawImage(this.img, this.x, this.y, 207, 233)
+    ctx.drawImage(this.img, this.x, this.y, 171, 226)
   }
   }
 
@@ -319,6 +327,8 @@ constructor(img){
   this.y = 0
   this.height = 450
   this.width = 900
+  this.music = new Audio()
+  this.music.src = "./assets/music/background.mp3"
   this.img = new Image()
   this.img.src = img
   this.img.onload = () => {
@@ -392,7 +402,7 @@ class Wrong2 {
   }
 }
 
-class FoodP1 { 
+class FoodP1 {
 	constructor (index){
 		this.x = 160
 		this.y = 360
@@ -433,5 +443,50 @@ class FoodP2 {
 		ctx.clearRect(this.img, this.x, this.y, 0)
 	}
 }
+class ScoreP1{
+  constructor(x, y){
+    this.x= x
+    this.y= y
+    this.text = ""
+    this.score = 0;
+    }
+    draw(){
+     this.text = "Score: " + this.score
 
+      ctx.font="50px start"
+      ctx.fillStyle = "Gray"
+      ctx.fillText(this.text,120,90)
 
+    }
+  }
+
+  class ScoreP2{
+    constructor(x, y){
+      this.x= x
+      this.y= y
+      this.text = ""
+      this.score = 0;
+      }
+      draw(){
+       this.text = "Score: " + this.score
+        console.log("yolo")
+        ctx.font="50px start"
+        ctx.fillStyle = "Gray"
+        ctx.fillText(this.text,630, 90)
+  
+      }
+    }
+
+  class Timer {
+    constructor(x, y){
+      this.x = x
+      this.y = y
+      this.time = 20
+
+    }
+    draw(){
+      ctx.font = "120px start"
+      ctx.fillStyle = "black"
+      ctx.fillText(this.time,  400, 200)
+    }
+  }

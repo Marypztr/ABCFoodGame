@@ -17,4 +17,6 @@ let foodP1 = new FoodP1(randomFoodP1)
 const successGirl = new SuccessGirl(600, 110, images.happyGirl)
 const failsGirl = new FailGirl(600,110, images.girlSad)
 let foodP2 = new FoodP2(randomFoodP2)
-
+const scoreP1 = new ScoreP1(200, 200)
+const scoreP2 = new ScoreP2(600,200)
+const timer = new Timer(0, 0)
