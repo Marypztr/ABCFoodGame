@@ -3,6 +3,11 @@
   src: url(./assets/fonts/Bomber\ Balloon.ttf);
 
 }
+
+@font-face{
+  font-family: "timer";
+  src:url(./assets/fonts/Play\ Time\ -\ Demo.ttf);
+}
 body{ 
     background-image:url("https://i.pinimg.com/originals/45/1d/51/451d5105f660fa72f8e1395cec93565c.jpg");
     background-position:bottom;

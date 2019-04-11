@@ -5,17 +5,22 @@ let p1Success = false;
 let p1Fail = false;
 let p2Success =false;
 let p2Fail = false;
+let isRunning = false;
 
 
 buttonStart.addEventListener('click', ()=>{
    subMain.style.visibility = 'hidden'
+   isRunning = true
    border = "none"
    start();
+   
 })
 
+// while(isRunning){
+
 document.addEventListener('keydown', (e)=>{
-   if(e.keyCode === 68 || e.keyCode === 65){
-       console.log(foodP1.status, e.keyCode)
+    if(isRunning){
+   if(e.keyCode === 68 || e.keyCode === 65){ 
        if(foodP1.status === e.keyCode){
            p1Success = true
            scoreP1.score++
@@ -31,16 +36,21 @@ document.addEventListener('keydown', (e)=>{
            foodP1.draw()
        }
    }
+}
 })
 
+
 document.addEventListener('keydown', (e)=>{
+    if(isRunning){
     if(e.keyCode === 39 || e.keyCode === 37){
         if(foodP2.status === e.keyCode){
             p2Success = true
             scoreP2.score++
-            randomFoodP2 = foodListP2[Math.floor(Math.random()*foodListP2.length)]
-            foodP2 = new FoodP2(randomFoodP2)
-            foodP2.draw()
+            
+                randomFoodP2 = foodListP2[Math.floor(Math.random()*foodListP2.length)]
+                foodP2 = new FoodP2(randomFoodP2)
+                foodP2.draw()
+            
         } else {
             p2Fail = true
             scoreP2.score--
@@ -49,4 +59,6 @@ document.addEventListener('keydown', (e)=>{
             foodP2.draw()
         }
     }
+}
  })
+// }

@@ -59,6 +59,7 @@ function start(){
 }
 
 function stop(){
+isRunning =false;
 clearInterval(interval)
 interval = 0
 board.music.pause()

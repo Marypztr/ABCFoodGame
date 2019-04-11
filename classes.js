@@ -103,7 +103,83 @@ const foodListP1 = [
     img:'./assets/images/food/tacos.png',
     status:65
     
-  }
+  },
+  food19 ={
+    img:'./assets/images/food/avocado.png',
+    status:68
+  },
+  food20 ={
+    img:'./assets/images/food/bacon.png',
+    status:65
+  },
+  food21 ={
+    img:'./assets/images/food/bread.png',
+    status:68
+  },
+  food22 ={
+    img:'./assets/images/food/brocoli.png',
+    status:68
+  },
+  food23 ={
+    img:'./assets/images/food/candy.png',
+    status:65
+  },
+  food24 ={
+    img:'./assets/images/food/champiñon.png',
+    status:68
+  },
+  food25 ={
+    img:'./assets/images/food/chocolatebar.png',
+    status:65
+  },
+  food26 ={
+    img:'./assets/images/food/fish.png',
+    status:68
+  },
+  food27 ={
+    img:'./assets/images/food/hotdog.png',
+    status:65
+  },
+  food28 ={
+    img:'./assets/images/food/lettuce.png',
+    status:68
+  },
+  food29 ={
+    img:'./assets/images/food/mango.png',
+    status:68
+  },
+  food30 ={
+    img:'./assets/images/food/meat.png',
+    status:68
+  },
+  food31 ={
+    img:'./assets/images/food/nachos2.png',
+    status:65
+  },
+  food32 ={
+    img:'./assets/images/food/nopal.png',
+    status:68
+  },
+  food33 ={
+    img:'./assets/images/food/orange.png',
+    status:68
+  },
+  food34 ={
+    img:'./assets/images/food/sugarcotton.png',
+    status:65
+  },
+  food35 ={
+    img:'./assets/images/food/tomato.png',
+    status:68
+  },
+  food36 ={
+    img:'./assets/images/food/water.png',
+    status:68
+  },
+  food37 ={
+    img:'./assets/images/food/watermelon.png',
+    status:68
+  },
   ]
 
 const foodListP2 = [
@@ -196,7 +272,83 @@ const foodListP2 = [
     img:'./assets/images/food/tacos.png',
     
     status:37
-  }
+  },
+  food19 ={
+    img:'./assets/images/food/avocado.png',
+    status:39
+  },
+  food20 ={
+    img:'./assets/images/food/bacon.png',
+    status:37
+  },
+  food21 ={
+    img:'./assets/images/food/bread.png',
+    status:39
+  },
+  food22 ={
+    img:'./assets/images/food/brocoli.png',
+    status:39
+  },
+  food23 ={
+    img:'./assets/images/food/candy.png',
+    status:37
+  },
+  food24 ={
+    img:'./assets/images/food/champiñon.png',
+    status:39
+  },
+  food25 ={
+    img:'./assets/images/food/chocolatebar.png',
+    status:37
+  },
+  food26 ={
+    img:'./assets/images/food/fish.png',
+    status:39
+  },
+  food27 ={
+    img:'./assets/images/food/hotdog.png',
+    status:37
+  },
+  food28 ={
+    img:'./assets/images/food/lettuce.png',
+    status:39
+  },
+  food29 ={
+    img:'./assets/images/food/mango.png',
+    status:39
+  },
+  food30 ={
+    img:'./assets/images/food/meat.png',
+    status:39
+  },
+  food31 ={
+    img:'./assets/images/food/nachos2.png',
+    status:37
+  },
+  food32 ={
+    img:'./assets/images/food/nopal.png',
+    status:39
+  },
+  food33 ={
+    img:'./assets/images/food/orange.png',
+    status:39
+  },
+  food34 ={
+    img:'./assets/images/food/sugarcotton.png',
+    status:37
+  },
+  food35 ={
+    img:'./assets/images/food/tomato.png',
+    status:39
+  },
+  food36 ={
+    img:'./assets/images/food/water.png',
+    status:39
+  },
+  food37 ={
+    img:'./assets/images/food/watermelon.png',
+    status:39
+  },
   ]
   
 
@@ -486,9 +638,9 @@ class ScoreP1{
 
     }
     draw(){
-      ctx.font = "120px start"
+      ctx.font = "120px timer"
       ctx.fillStyle = "black"
-      ctx.fillText(this.time,  400, 200)
+      ctx.fillText(this.time,  400, 110)
     }
   }
 
@@ -504,9 +656,7 @@ class ScoreP1{
       this.music.src = "./assets/music/gameover.mp3"
       this.img = new Image()
       this.img.src = img
-      this.img.onload = () => {
-        this.draw()
-      }
+     
     }
     drawWinner(){
       ctx.drawImage(this.img, this.x, this.y, canvas.width, canvas.height)
